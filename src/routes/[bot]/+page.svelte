@@ -4,12 +4,12 @@
 </script>
 
 <svelte:head
-	><title>{bot.name} — Voicely</title>
+	><title>{bot.name} — Voicely Bots</title>
     <meta name="description" content={bot.description} /><link
 		rel="canonical"
 		href="https://voicely.gozarproductions.com/{bot.slug}/"
 	/>
-	<meta property="og:title" content="{bot.name} — Voicely" />
+	<meta property="og:title" content="{bot.name} — Voicely Bots" />
 	<meta property="og:description" content={bot.description} />
 	<meta property="og:image" content={bot.icon} />
 	<meta property="og:image:width" content="900" />
@@ -20,7 +20,7 @@
 	<meta property="og:type" content="website" />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="{bot.name} — Voicely" />
+	<meta name="twitter:title" content="{bot.name} — Voicely Bots" />
 	<meta name="twitter:description" content={bot.description} />
 	<meta name="twitter:image" content={bot.icon} />
     </svelte:head
