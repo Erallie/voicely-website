@@ -152,6 +152,8 @@
 		color: #c1cad8;
 	}
 	footer {
+		position: relative;
+		z-index: 1;
 		background: #060b18;
 		color: #f6f2e9;
 		padding: 5rem 0 1.4rem;
