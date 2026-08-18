@@ -24,7 +24,7 @@
 	<div class="wrap footer-inner">
 		<div>
 			<a class="brand" href="/"><img class="brand-mark" src={favicon} alt="" /><span>Voicely</span></a>
-			<p>Thoughtful Discord bots for more connected communities.</p>
+			<p>Voice-oriented Discord bots for more connected communities.</p>
 		</div>
 		<div>
 			<p class="footer-label">The family</p>

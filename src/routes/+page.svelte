@@ -5,7 +5,7 @@
 <svelte:head
 	><title>Voicely — Discord bots for connected communities</title><meta
 		name="description"
-		content="Four focused Discord bots for voice, notifications, roles, and translation."
+		content="Four voice-oriented Discord bots for text-to-speech, notifications, and translation."
 	/><link rel="canonical" href="https://voicely.gozarproductions.com/" /></svelte:head
 >
 
@@ -13,9 +13,9 @@
 	<section class="hero wrap">
 		<div class="hero-copy">
 			<span class="status"><i></i> Voicely bot suite</span>
-			<h1>Enhance your voice channels.<br />Speak with ease.</h1>
+			<h1>Enhance your voice chat.<br />Speak with ease.</h1>
 			<p>
-				Four focused tools for communities that want clearer conversations, more active voice
+				Four voice-oriented tools for communities that want clearer conversations, more active voice
 				channels, and fewer barriers.
 			</p>
 			<a class="primary-action" href="#bots">Browse bots</a>
