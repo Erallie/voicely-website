@@ -1,3 +1,5 @@
-# allow crawling everything by default
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+Sitemap: https://voicely.gozarproductions.com/sitemap.xml
