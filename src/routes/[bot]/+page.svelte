@@ -23,14 +23,14 @@
 			<p>{bot.description}</p>
 			<div class="actions">
 				{#if bot.inviteUrl}
-					<a class="button invite" href={bot.inviteUrl} rel="external">Invite {bot.name}</a>
+					<a class="button invite" href={bot.inviteUrl} rel="external" target="_blank">Invite {bot.name}</a>
 				{:else}
 					<span class="button invite unavailable" title="Add inviteUrl in src/lib/bots.ts"
 						>Invite link coming soon</span
 					>
 				{/if}
 				{#if bot.appDirectoryUrl}
-					<a class="button directory" href={bot.appDirectoryUrl} rel="external"
+					<a class="button directory" href={bot.appDirectoryUrl} target="_blank" rel="external"
 						>View in App Directory</a
 					>
 				{:else}
