@@ -362,7 +362,7 @@
 		border-radius: var(--panel-radius);
 	}
 	.hero-copy {
-		margin-top: 1rem;
+		margin-top: 3rem;
 		padding: 2.5rem;
 		background: rgba(5, 7, 11, var(--bot-panel-opacity));
 		border: 1px solid color-mix(in srgb, var(--bot-accent) 20%, transparent);
