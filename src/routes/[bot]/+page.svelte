@@ -45,7 +45,7 @@
 	<section class="features wrap">
 		<div>
 			<p class="eyebrow">What it does</p>
-			<h2>Built for the moments that bring people together.</h2>
+			<h2>{bot.whatItDoes}</h2>
 		</div>
 		<div class="feature-list">
 			{#each bot.features as feature, index}<article>

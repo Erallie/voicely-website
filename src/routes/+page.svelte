@@ -13,7 +13,7 @@
 	<section class="hero wrap">
 		<div class="hero-copy">
 			<span class="status"><i></i> Voicely bot suite</span>
-			<h1>Useful bots.<br />Better Discord servers.</h1>
+			<h1>Enhance your voice channels.<br />Speak with ease.</h1>
 			<p>
 				Four focused tools for communities that want clearer conversations, more active voice
 				channels, and fewer barriers.

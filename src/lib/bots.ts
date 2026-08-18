@@ -6,6 +6,7 @@ export type Bot = {
 	description: string;
 	icon: string;
 	banner: string;
+    whatItDoes: string;
 	repository: string;
 	inviteUrl: string;
 	appDirectoryUrl: string;
@@ -26,6 +27,7 @@ export const bots: Bot[] = [
 			"Speak messages from a voice channel's text chat aloud, with personal voices, accents, regions, and nicknames.",
 		icon: '/images/voicely-text.png',
 		banner: '/images/voicely-text-banner.png',
+        whatItDoes: "Built for mutes and talkers alike.",
 		repository: 'https://github.com/Erallie/voicely-text',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1290741552158609419',
 		appDirectoryUrl: 'https://discord.com/application-directory/1290741552158609419',
@@ -61,6 +63,7 @@ export const bots: Bot[] = [
 			'Get a private notification when a voice channel reaches the number of people you choose.',
 		icon: '/images/voicely-ping.png',
 		banner: '/images/voicely-ping-banner.png',
+		whatItDoes: 'Built with flexibility in mind.',
 		repository: 'https://github.com/Erallie/voicely-ping',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1290742648377966735',
 		appDirectoryUrl: 'https://discord.com/application-directory/1290742648377966735',
@@ -93,7 +96,8 @@ export const bots: Bot[] = [
 			'Let your community know when people gather in voice by notifying a role at the perfect moment.',
 		icon: '/images/voicely-role.png',
 		banner: '/images/voicely-role-banner.png',
-		repository: 'https://github.com/Erallie/voicely-role',
+		whatItDoes: 'Built to promote server activity.',
+	    repository: 'https://github.com/Erallie/voicely-role',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1527731147428073493',
 		appDirectoryUrl: 'https://discord.com/application-directory/1527731147428073493',
 		accent: '#f9f8e6',
@@ -128,6 +132,7 @@ export const bots: Bot[] = [
 			'Bring multilingual communities closer with translation designed for conversations on Discord.',
 		icon: '/images/voicely-translate.png',
 		banner: '/images/voicely-translate-banner.png',
+        whatItDoes: 'Built to suit every server.',
 		repository: 'https://github.com/Erallie/voicely-translate',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1535789654974930964',
 		appDirectoryUrl: 'https://discord.com/application-directory/1535789654974930964',
