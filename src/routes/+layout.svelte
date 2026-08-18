@@ -28,8 +28,8 @@
 		</div>
 		<div>
 			<p class="footer-label">The family</p>
-			<a href="/text/">Text</a><a href="/ping/">Ping</a><a href="/role/">Role</a><a
-				href="/translate/">Translate</a
+			<a href="/text/">Voicely Text</a><a href="/ping/">Voicely Ping</a><a href="/role/">Voicely Role</a><a
+				href="/translate/">Voicely Translate</a
 			>
 		</div>
 		<div>
