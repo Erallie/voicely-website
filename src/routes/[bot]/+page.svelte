@@ -16,7 +16,7 @@
 	style:--bot-bg-end={bot.backgroundEnd}
 >
 	<section class="bot-hero">
-		<img src={bot.banner} alt="{bot.name} banner" />
+		<img src={bot.icon} alt="{bot.name} icon" />
 		<div class="hero-copy wrap">
 			<p class="eyebrow">Meet {bot.name}</p>
 			<h1>{bot.tagline}</h1>
@@ -354,9 +354,9 @@
 	}
 	.bot-hero > img {
 		display: block;
-		width: min(1180px, calc(100% - 3rem));
+		width: min(26rem, calc(100% - 3rem));
 		height: auto;
-		aspect-ratio: 680 / 240;
+		aspect-ratio: 1 / 1;
 		margin: 0 auto;
 		border: 1px solid color-mix(in srgb, var(--bot-accent) 22%, transparent);
 		border-radius: var(--panel-radius);
@@ -436,7 +436,7 @@
 	}
 	@media (max-width: 750px) {
 		.bot-hero > img {
-			width: calc(100% - 2rem);
+			width: min(26rem, calc(100% - 2rem));
 			height: auto;
 		}
 		.hero-copy,
