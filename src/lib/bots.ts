@@ -125,7 +125,7 @@ export const bots: Bot[] = [
 		shortName: 'Translate',
 		tagline: 'Help every voice be understood.',
 		description:
-			'Bring multilingual communities closer with affordable translation designed for conversations on Discord.',
+			'Bring multilingual communities closer with translation designed for conversations on Discord.',
 		icon: '/images/voicely-translate.png',
 		banner: '/images/voicely-translate-banner.png',
 		repository: 'https://github.com/Erallie/voicely-translate',
