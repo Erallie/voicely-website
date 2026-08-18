@@ -1,15 +1,17 @@
 <script lang="ts">
+	import favicon from '$lib/assets/favicon.svg';
+
 	let { children } = $props();
 </script>
 
 <svelte:head>
-	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+	<link rel="icon" href={favicon} type="image/svg+xml" />
 	<meta name="theme-color" content="#11172d" />
 </svelte:head>
 
 <header class="site-header">
 	<a class="brand" href="/" aria-label="Voicely home"
-		><span class="brand-mark">V</span><span>Voicely</span></a
+		><img class="brand-mark" src={favicon} alt="" /><span>Voicely</span></a
 	>
 	<nav aria-label="Main navigation">
 		<a href="/#bots">Bots</a><a href="https://GozarProductions.com" rel="external"
@@ -21,7 +23,7 @@
 <footer>
 	<div class="wrap footer-inner">
 		<div>
-			<a class="brand" href="/"><span class="brand-mark">V</span><span>Voicely</span></a>
+			<a class="brand" href="/"><img class="brand-mark" src={favicon} alt="" /><span>Voicely</span></a>
 			<p>Thoughtful Discord bots for more connected communities.</p>
 		</div>
 		<div>
@@ -133,16 +135,11 @@
 		letter-spacing: -0.03em;
 	}
 	.brand-mark {
-		display: grid;
-		place-items: center;
+		display: block;
 		width: 2rem;
 		height: 2rem;
 		border-radius: 50%;
-		background: linear-gradient(135deg, #db737e, #efd397);
-		color: #11172d;
-		font-family: inherit;
-		font-style: normal;
-		font-weight: 900;
+		object-fit: cover;
 		box-shadow: 0 0 22px rgba(223, 125, 132, 0.25);
 	}
 	.site-header nav {
