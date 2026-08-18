@@ -5,7 +5,8 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"generate-sitemap": "node scripts/generate-sitemap.mjs",
+		"build": "npm run generate-sitemap && vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -33,6 +34,7 @@
 		"vite": "^8.0.16"
 	},
 	"dependencies": {
-		"marked": "^18.0.10"
+		"marked": "^18.0.10",
+		"sitemap": "^9.0.1"
 	}
 }
