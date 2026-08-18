@@ -152,7 +152,7 @@
 	.directory {
 		border: 1px solid #4b5267;
 		color: #afb4c2;
-		cursor: not-allowed;
+		cursor: pointer;
 	}
 	.unavailable {
 		cursor: not-allowed;
