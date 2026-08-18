@@ -25,8 +25,8 @@ export const bots: Bot[] = [
 		tagline: 'Give every message a voice.',
 		description:
 			"Speak messages from a voice channel's text chat aloud, with personal voices, accents, regions, and nicknames.",
-		icon: '/images/voicely-text.png',
-		banner: '/images/voicely-text-banner.png',
+		icon: '/images/voicely-text.webp',
+		banner: '/images/voicely-text-banner.webp',
         whatItDoes: "Built for mutes and talkers alike.",
 		repository: 'https://github.com/Erallie/voicely-text',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1290741552158609419',
@@ -61,8 +61,8 @@ export const bots: Bot[] = [
 		tagline: 'Know when the conversation starts.',
 		description:
 			'Get a private notification when a voice channel reaches the number of people you choose.',
-		icon: '/images/voicely-ping.png',
-		banner: '/images/voicely-ping-banner.png',
+		icon: '/images/voicely-ping.webp',
+		banner: '/images/voicely-ping-banner.webp',
 		whatItDoes: 'Built with flexibility in mind.',
 		repository: 'https://github.com/Erallie/voicely-ping',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1290742648377966735',
@@ -94,8 +94,8 @@ export const bots: Bot[] = [
 		tagline: 'Turn a few voices into a full room.',
 		description:
 			'Let your community know when people gather in voice by notifying a role at the perfect moment.',
-		icon: '/images/voicely-role.png',
-		banner: '/images/voicely-role-banner.png',
+		icon: '/images/voicely-role.webp',
+		banner: '/images/voicely-role-banner.webp',
 		whatItDoes: 'Built to promote server activity.',
 	    repository: 'https://github.com/Erallie/voicely-role',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1527731147428073493',
@@ -130,8 +130,8 @@ export const bots: Bot[] = [
 		tagline: 'Help every voice be understood.',
 		description:
 			'Bring multilingual communities closer with translation designed for conversations on Discord.',
-		icon: '/images/voicely-translate.png',
-		banner: '/images/voicely-translate-banner.png',
+		icon: '/images/voicely-translate.webp',
+		banner: '/images/voicely-translate-banner.webp',
         whatItDoes: 'Built to suit every server.',
 		repository: 'https://github.com/Erallie/voicely-translate',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1535789654974930964',
