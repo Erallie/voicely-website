@@ -428,7 +428,8 @@
 		color: transparent;
 		-webkit-text-fill-color: transparent;
 	}
-	.invite {
+	.invite,
+	.next .button-light {
 		background: linear-gradient(135deg, var(--bot-accent), var(--bot-soft));
 		color: #090b10;
 		-webkit-text-fill-color: #090b10;
