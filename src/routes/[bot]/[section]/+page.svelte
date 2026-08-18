@@ -1,4 +1,13 @@
 <script lang="ts">
+	import PingPrivacy from '$lib/legal-components/PingPrivacy.svelte';
+	import PingTerms from '$lib/legal-components/PingTerms.svelte';
+	import RolePrivacy from '$lib/legal-components/RolePrivacy.svelte';
+	import RoleTerms from '$lib/legal-components/RoleTerms.svelte';
+	import TextPrivacy from '$lib/legal-components/TextPrivacy.svelte';
+	import TextTerms from '$lib/legal-components/TextTerms.svelte';
+	import TranslatePrivacy from '$lib/legal-components/TranslatePrivacy.svelte';
+	import TranslateTerms from '$lib/legal-components/TranslateTerms.svelte';
+
 	let { data } = $props();
 	let bot = $derived(data.bot);
 	let section = $derived(data.section);
@@ -14,6 +23,37 @@
 				? `Privacy information for ${bot.name}.`
 				: `Terms of service for ${bot.name}.`
 	);
+
+	function linkHeadings(node: HTMLElement) {
+		const usedIds = new Set<string>();
+		const headings = node.querySelectorAll<HTMLElement>(
+			'.legal-document h1, .legal-document h2, .legal-document h3, .legal-document h4'
+		);
+
+		for (const heading of headings) {
+			const baseId =
+				heading.textContent
+					?.toLowerCase()
+					.normalize('NFKD')
+					.replace(/[\u0300-\u036f]/g, '')
+					.replace(/[^a-z0-9]+/g, '-')
+					.replace(/^-|-$/g, '') || 'section';
+			let id = baseId;
+			let suffix = 2;
+			while (usedIds.has(id)) id = `${baseId}-${suffix++}`;
+			usedIds.add(id);
+			heading.id = id;
+
+			const link = document.createElement('a');
+			link.href = `#${id}`;
+			while (heading.firstChild) link.append(heading.firstChild);
+			heading.append(link);
+		}
+
+		if (location.hash) {
+			requestAnimationFrame(() => document.getElementById(location.hash.slice(1))?.scrollIntoView());
+		}
+	}
 </script>
 
 <svelte:head
@@ -38,7 +78,7 @@
 			<h1>{titles[section]}</h1>
 		</div>
 	</header>
-	<article class="content wrap">
+	<article class="content wrap" use:linkHeadings>
 		{#if section === 'docs'}
 			<p class="lead">
 				The latest setup instructions, commands, examples, and troubleshooting notes for {bot.name} live
@@ -61,40 +101,24 @@
 				</p>
 				<a class="text-link" href="{bot.repository}/issues">View support issues →</a>
 			</section>
-		{:else if section === 'privacy'}
-			<p class="lead">
-				Your community's trust matters. This page is reserved for the official {bot.name} privacy policy.
-			</p>
-			<div class="notice">
-				<strong>Policy text coming soon</strong>
-				<p>
-					Add the reviewed policy here before publicly inviting users. Until then, the repository
-					remains the source for current legal information.
-				</p>
-			</div>
-			<section>
-				<h2>Current policy source</h2>
-				<p>Review the legal files maintained with {bot.name} on GitHub.</p>
-				<a class="button primary" href="{bot.repository}/tree/main/legal"
-					>View legal documents on GitHub ↗</a
-				>
-			</section>
 		{:else}
-			<p class="lead">This page is reserved for the official terms governing use of {bot.name}.</p>
-			<div class="notice">
-				<strong>Terms text coming soon</strong>
-				<p>
-					Add the reviewed terms here before publicly inviting users. Until then, the repository
-					remains the source for current legal information.
-				</p>
-			</div>
-			<section>
-				<h2>Current terms source</h2>
-				<p>Review the legal files maintained with {bot.name} on GitHub.</p>
-				<a class="button primary" href="{bot.repository}/tree/main/legal"
-					>View legal documents on GitHub ↗</a
-				>
-			</section>
+			{#if bot.slug === 'text' && section === 'privacy'}
+				<TextPrivacy />
+			{:else if bot.slug === 'text'}
+				<TextTerms />
+			{:else if bot.slug === 'ping' && section === 'privacy'}
+				<PingPrivacy />
+			{:else if bot.slug === 'ping'}
+				<PingTerms />
+			{:else if bot.slug === 'role' && section === 'privacy'}
+				<RolePrivacy />
+			{:else if bot.slug === 'role'}
+				<RoleTerms />
+			{:else if section === 'privacy'}
+				<TranslatePrivacy />
+			{:else}
+				<TranslateTerms />
+			{/if}
 		{/if}
 	</article>
 </main>
@@ -177,19 +201,84 @@
 		font-weight: 750;
 		color: var(--bot-accent);
 	}
-	.notice {
-		background: #111a30;
-		border: 1px solid #27334c;
-		border-left: 5px solid var(--bot-accent);
-		padding: 1.5rem 1.7rem;
-		margin: 3rem 0;
+	:global(.legal-document h1) {
+		font-size: clamp(2rem, 4vw, 3.25rem);
+		line-height: 1.1;
+		margin: 0 0 1.5rem;
 	}
-	.notice strong {
-		font-size: 1.25rem;
-		color: var(--bot-accent);
+	:global(.legal-document h2) {
+		font-size: clamp(1.5rem, 3vw, 2.1rem);
+		line-height: 1.2;
+		margin: 3rem 0 1rem;
+		padding-top: 2rem;
+		border-top: 1px solid color-mix(in srgb, var(--bot-accent) 24%, transparent);
 	}
-	.notice p {
-		margin: 0.6rem 0 0;
+	:global(.legal-document h3) {
+		font-size: 1.3rem;
+		margin: 2rem 0 0.8rem;
+	}
+	:global(.legal-document h4) {
+		font-size: 1.08rem;
+		margin: 1.75rem 0 0.7rem;
+	}
+	:global(.legal-document p),
+	:global(.legal-document li) {
+		font-size: 1rem;
+		line-height: 1.75;
+	}
+	:global(.legal-document ul),
+	:global(.legal-document ol) {
+		padding-left: 1.4rem;
+		margin: 1rem 0 1.5rem;
+	}
+	:global(.legal-document li) {
+		padding-left: 0.35rem;
+		margin: 0.45rem 0;
+	}
+	:global(.legal-document a),
+	.legal-source a {
+		color: inherit;
+		font-weight: 700;
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.2em;
+	}
+	:global(.legal-document :is(h1, h2, h3, h4) > a) {
+		color: inherit;
+		text-decoration: none;
+	}
+	:global(.legal-document :is(h1, h2, h3, h4) > a:hover),
+	:global(.legal-document :is(h1, h2, h3, h4) > a:focus-visible) {
+		text-decoration: underline;
+	}
+	:global(.legal-document code) {
+		padding: 0.15rem 0.38rem;
+		border-radius: 0.35rem;
+		background: rgba(0, 0, 0, 0.32);
+		font-size: 0.9em;
+	}
+	:global(.legal-document hr) {
+		border: 0;
+		border-top: 1px solid color-mix(in srgb, var(--bot-accent) 24%, transparent);
+		margin: 2.5rem 0;
+	}
+	:global(.legal-document h1),
+	:global(.legal-document h2),
+	:global(.legal-document h3),
+	:global(.legal-document h4),
+	:global(.legal-document p),
+	:global(.legal-document li),
+	:global(.legal-document a),
+	.legal-source {
+		background: linear-gradient(135deg, var(--bot-accent), var(--bot-soft));
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		-webkit-text-fill-color: transparent;
+	}
+	.legal-source {
+		margin-top: 3rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid color-mix(in srgb, var(--bot-accent) 24%, transparent);
 	}
 	main {
 		background: linear-gradient(145deg, var(--bot-bg-start), var(--bot-bg-end));
@@ -217,11 +306,6 @@
 	}
 	.content section {
 		border-color: color-mix(in srgb, var(--bot-accent) 35%, transparent);
-	}
-	.notice {
-		background: color-mix(in srgb, var(--bot-bg-end) 72%, transparent);
-		border-color: color-mix(in srgb, var(--bot-accent) 30%, transparent);
-		border-left-color: var(--bot-accent);
 	}
 	main {
 		position: relative;
@@ -267,7 +351,6 @@
 	.back,
 	.content h2,
 	.content p,
-	.content strong,
 	.text-link {
 		background: linear-gradient(135deg, var(--bot-accent), var(--bot-soft));
 		-webkit-background-clip: text;
@@ -279,9 +362,6 @@
 		background: linear-gradient(135deg, var(--bot-accent), var(--bot-soft));
 		color: #090b10;
 		-webkit-text-fill-color: #090b10;
-	}
-	.notice {
-		background: rgba(0, 0, 0, calc(var(--bot-panel-opacity) * 0.5));
 	}
 	@media (max-width: 650px) {
 		.content {
