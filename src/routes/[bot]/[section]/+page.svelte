@@ -1,12 +1,6 @@
 <script lang="ts">
-	import PingPrivacy from '$lib/legal-components/PingPrivacy.svelte';
-	import PingTerms from '$lib/legal-components/PingTerms.svelte';
-	import RolePrivacy from '$lib/legal-components/RolePrivacy.svelte';
-	import RoleTerms from '$lib/legal-components/RoleTerms.svelte';
-	import TextPrivacy from '$lib/legal-components/TextPrivacy.svelte';
-	import TextTerms from '$lib/legal-components/TextTerms.svelte';
-	import TranslatePrivacy from '$lib/legal-components/TranslatePrivacy.svelte';
-	import TranslateTerms from '$lib/legal-components/TranslateTerms.svelte';
+	import { getLegalDocument } from '$lib/legal';
+	import { marked } from 'marked';
 
 	let { data } = $props();
 	let bot = $derived(data.bot);
@@ -23,6 +17,8 @@
 				? `Privacy information for ${bot.name}.`
 				: `Terms of service for ${bot.name}.`
 	);
+	let legalMarkdown = $derived(getLegalDocument(bot.slug, section));
+	let legalHtml = $derived(legalMarkdown ? (marked.parse(legalMarkdown) as string) : '');
 
 	function linkHeadings(node: HTMLElement) {
 		const usedIds = new Set<string>();
@@ -102,23 +98,7 @@
 				<a class="text-link" href="{bot.repository}/issues">View support issues →</a>
 			</section>
 		{:else}
-			{#if bot.slug === 'text' && section === 'privacy'}
-				<TextPrivacy />
-			{:else if bot.slug === 'text'}
-				<TextTerms />
-			{:else if bot.slug === 'ping' && section === 'privacy'}
-				<PingPrivacy />
-			{:else if bot.slug === 'ping'}
-				<PingTerms />
-			{:else if bot.slug === 'role' && section === 'privacy'}
-				<RolePrivacy />
-			{:else if bot.slug === 'role'}
-				<RoleTerms />
-			{:else if section === 'privacy'}
-				<TranslatePrivacy />
-			{:else}
-				<TranslateTerms />
-			{/if}
+			<div class="legal-document">{@html legalHtml}</div>
 		{/if}
 	</article>
 </main>
@@ -235,8 +215,7 @@
 		padding-left: 0.35rem;
 		margin: 0.45rem 0;
 	}
-	:global(.legal-document a),
-	.legal-source a {
+	:global(.legal-document a) {
 		color: inherit;
 		font-weight: 700;
 		text-decoration-thickness: 1px;
@@ -267,18 +246,12 @@
 	:global(.legal-document h4),
 	:global(.legal-document p),
 	:global(.legal-document li),
-	:global(.legal-document a),
-	.legal-source {
+	:global(.legal-document a) {
 		background: linear-gradient(135deg, var(--bot-accent), var(--bot-soft));
 		-webkit-background-clip: text;
 		background-clip: text;
 		color: transparent;
 		-webkit-text-fill-color: transparent;
-	}
-	.legal-source {
-		margin-top: 3rem;
-		padding-top: 1.5rem;
-		border-top: 1px solid color-mix(in srgb, var(--bot-accent) 24%, transparent);
 	}
 	main {
 		background: linear-gradient(145deg, var(--bot-bg-start), var(--bot-bg-end));
