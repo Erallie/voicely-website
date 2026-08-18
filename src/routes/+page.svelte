@@ -22,10 +22,14 @@
 		</div>
 		<div class="preview" aria-label="Voicely bot status preview">
 			<div class="preview-bar"><span></span><span></span><span></span><b>voicely / bots</b></div>
-			{#each bots as bot}<div class="preview-row">
+			{#each bots as bot}<div
+					class="preview-row"
+					style:--accent={bot.accent}
+					style:--accent-soft={bot.accentSoft}
+				>
 					<img src={bot.icon} alt="" />
 					<div><strong>{bot.name}</strong><small>Ready</small></div>
-					<i style:background={bot.accent}></i>
+					<i></i>
 				</div>{/each}
 		</div>
 	</section>
@@ -43,6 +47,7 @@
 					class="bot-card"
 					href="/{bot.slug}/"
 					style:--accent={bot.accent}
+					style:--accent-soft={bot.accentSoft}
 					style:--bg-start={bot.backgroundStart}
 					style:--bg-end={bot.backgroundEnd}
 					><div class="banner"><img src={bot.banner} alt="" /></div>
@@ -183,6 +188,7 @@
 		width: 0.55rem;
 		height: 0.55rem;
 		border-radius: 50%;
+		background: linear-gradient(135deg, var(--accent), var(--accent-soft));
 	}
 	.catalog {
 		padding-top: 7rem;
@@ -259,8 +265,12 @@
 	}
 	.title-line span {
 		font-size: 0.75rem;
-		color: var(--accent);
 		font-weight: 700;
+		background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		-webkit-text-fill-color: transparent;
 	}
 	.card-body > p {
 		color: #969eaa;
