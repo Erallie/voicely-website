@@ -11,7 +11,11 @@ export default defineConfig({
 					filename.split(/[/\\]/).includes('node_modules') ? undefined : true
 			},
 
-			adapter: adapter({ fallback: '404.html' })
+			adapter: adapter({
+                pages: 'docs',
+                assets: 'docs',
+                fallback: '404.html'
+            })
 		})
 	]
 });
