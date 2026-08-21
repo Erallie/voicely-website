@@ -10,6 +10,10 @@
     
 	<meta property="og:title" content="Voicely Bots — Discord bots for connected communities" />
 	<meta property="og:description" content="Four voice-oriented Discord bots for text-to-speech, notifications, and translation." />
+	<meta property="og:image" content="/images/preview-image.webp" />
+	<meta property="og:image:width" content="1731" />
+	<meta property="og:image:height" content="909" />
+	<meta property="og:image:type" content="image/webp" />
 	<meta property="og:url" content="https://voicely.gozarproductions.com/" />
 	<meta property="og:site_name" content="Voicely Bots" />
 	<meta property="og:type" content="website" />
@@ -17,6 +21,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Voicely Bots — Discord bots for connected communities" />
 	<meta name="twitter:description" content="Four voice-oriented Discord bots for text-to-speech, notifications, and translation." />
+	<meta name="twitter:image" content="/images/preview-image.webp" />
     </svelte:head
 >
 
