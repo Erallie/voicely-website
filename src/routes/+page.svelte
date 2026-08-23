@@ -5,11 +5,11 @@
 <svelte:head
 	><title>Voicely Bots — Discord bots for connected communities</title><meta
 		name="description"
-		content="Four voice-oriented Discord bots for text-to-speech, notifications, and translation."
+		content="Four voice-oriented tools for communities that want clearer conversations, more active voice channels, and fewer barriers."
 	/><link rel="canonical" href="https://voicely.gozarproductions.com/" />
     
 	<meta property="og:title" content="Voicely Bots — Discord bots for connected communities" />
-	<meta property="og:description" content="Four voice-oriented Discord bots for text-to-speech, notifications, and translation." />
+	<meta property="og:description" content="Four voice-oriented tools for communities that want clearer conversations, more active voice channels, and fewer barriers." />
 	<meta property="og:image" content="/images/preview-image.webp" />
 	<meta property="og:image:width" content="1731" />
 	<meta property="og:image:height" content="909" />
@@ -20,7 +20,7 @@
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Voicely Bots — Discord bots for connected communities" />
-	<meta name="twitter:description" content="Four voice-oriented Discord bots for text-to-speech, notifications, and translation." />
+	<meta name="twitter:description" content="Four voice-oriented tools for communities that want clearer conversations, more active voice channels, and fewer barriers." />
 	<meta name="twitter:image" content="/images/preview-image.webp" />
     </svelte:head
 >
