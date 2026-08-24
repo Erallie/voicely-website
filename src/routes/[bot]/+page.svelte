@@ -33,7 +33,7 @@
 	<section class="bot-hero">
 		<img src={bot.icon} alt="{bot.name} icon" />
 		<div class="hero-copy wrap">
-			<p class="eyebrow">Meet {bot.name}</p>
+			<p class="eyebrow">{bot.name}</p>
 			<h1>{bot.tagline}</h1>
 			<p>{bot.description}</p>
 			<div class="actions">
@@ -75,8 +75,8 @@
 	</section>
 	<section class="resources">
 		<div class="wrap">
-			<p class="eyebrow">Keep exploring</p>
-			<h2>Everything you need.</h2>
+			<p class="eyebrow">Resources</p>
+			<h2>Guides, policies, and code.</h2>
 			<div class="resource-grid">
 				<a href="/{bot.slug}/docs/"
 					><span>01</span>
@@ -103,9 +103,9 @@
 		</div>
 	</section>
 	<section class="next wrap">
-		<p>Part of the Voicely family</p>
-		<h2>Explore all four bots.</h2>
-		<a class="button button-light" href="/#bots">Meet the family →</a>
+		<p>Other Voicely bots</p>
+		<h2>More ways to enhance voice chat.</h2>
+		<a class="button button-light" href="/#bots">Explore all bots →</a>
 	</section>
 </main>
 

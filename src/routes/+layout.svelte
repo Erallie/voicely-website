@@ -26,10 +26,10 @@
 			<a class="brand" href="/"
 				><img class="brand-mark" src={favicon} alt="" /><span>Voicely</span></a
 			>
-			<p>Voice-oriented Discord bots for more connected communities.</p>
+			<p>Discord bots that make voice chat easier to join, follow, and understand.</p>
 		</div>
 		<div>
-			<p class="footer-label">The family</p>
+			<p class="footer-label">Bots</p>
 			<a href="/text/">Voicely Text</a><a href="/ping/">Voicely Ping</a><a href="/role/"
 				>Voicely Role</a
 			><a href="/translate/">Voicely Translate</a>

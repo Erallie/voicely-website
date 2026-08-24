@@ -3,15 +3,15 @@
 </script>
 
 <svelte:head
-	><title>Voicely Bots — Discord bots for connected communities</title><meta
+	><title>Voicely Bots — Text-to-speech, alerts, and translation</title><meta
 		name="description"
-		content="Four voice-oriented tools for communities that want clearer conversations, more active voice channels, and fewer barriers."
+		content="Voicely makes Discord voice chat easier to join, follow, and understand—with text-to-speech, personal and server-wide voice notifications, and cost-friendly live translation."
 	/><link rel="canonical" href="https://voicely.gozarproductions.com/" />
 
-	<meta property="og:title" content="Voicely Bots — Discord bots for connected communities" />
+	<meta property="og:title" content="Voicely Bots — Text-to-speech, alerts, and translation" />
 	<meta
 		property="og:description"
-		content="Four voice-oriented tools for communities that want clearer conversations, more active voice channels, and fewer barriers."
+		content="Voicely makes Discord voice chat easier to join, follow, and understand—with text-to-speech, personal and server-wide voice notifications, and cost-friendly live translation."
 	/>
 	<meta
 		property="og:image"
@@ -25,10 +25,10 @@
 	<meta property="og:type" content="website" />
 
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Voicely Bots — Discord bots for connected communities" />
+	<meta name="twitter:title" content="Voicely Bots — Text-to-speech, alerts, and translation" />
 	<meta
 		name="twitter:description"
-		content="Four voice-oriented tools for communities that want clearer conversations, more active voice channels, and fewer barriers."
+		content="Voicely makes Discord voice chat easier to join, follow, and understand—with text-to-speech, personal and server-wide voice notifications, and cost-friendly live translation."
 	/>
 	<meta
 		name="twitter:image"
@@ -39,15 +39,15 @@
 <main>
 	<section class="hero wrap">
 		<div class="hero-copy">
-			<span class="status"><i></i> Voicely bot suite</span>
+			<span class="status"><i></i> Voicely Discord bots</span>
 			<h1>Enhance your voice chat.<br />Speak with ease.</h1>
 			<p>
-				Four voice-oriented tools for communities that want clearer conversations, more active voice
-				channels, and fewer barriers.
+				Voicely makes Discord voice chat easier to join, follow, and understand—with text-to-speech,
+				personal and server-wide voice notifications, and cost-friendly live translation.
 			</p>
 			<a class="primary-action" href="#bots">Browse bots</a>
 		</div>
-		<div class="preview" aria-label="Voicely bot status preview">
+		<div class="preview" aria-label="Voicely bot directory preview">
 			<div class="preview-bar"><span></span><span></span><span></span><b>voicely / bots</b></div>
 			{#each bots as bot (bot.slug)}<div
 					class="preview-row"
@@ -55,7 +55,7 @@
 					style:--accent-soft={bot.accentSoft}
 				>
 					<img src={bot.icon} alt="" />
-					<div><strong>{bot.name}</strong><small>Ready</small></div>
+					<div><strong>{bot.name}</strong><small>{bot.tagline}</small></div>
 					<i></i>
 				</div>{/each}
 		</div>
@@ -65,9 +65,12 @@
 		<header>
 			<div>
 				<span class="section-label">Bot directory</span>
-				<h2>Choose what your server needs.</h2>
+				<h2>Find the right bot for your voice chat.</h2>
 			</div>
-			<p>Each Voicely bot does one job and stays out of the way.</p>
+			<p>
+				Speak through text, know when people gather, invite more members to join, or translate
+				conversations without a monthly subscription.
+			</p>
 		</header>
 		<div class="bot-grid">
 			{#each bots as bot (bot.slug)}<a

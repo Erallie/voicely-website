@@ -24,10 +24,10 @@ export const bots: Bot[] = [
 		shortName: 'Text',
 		tagline: 'Give every message a voice.',
 		description:
-			"Speak messages from a voice channel's text chat aloud, with personal voices, accents, regions, and nicknames.",
+			"Type in a voice channel's text chat and let Voicely Text speak your message aloud with your preferred accent, region, and nickname.",
 		icon: '/images/voicely-text.webp',
 		banner: '/images/voicely-text-banner.png',
-		whatItDoes: 'Built for mutes and talkers alike.',
+		whatItDoes: 'Take part in voice chat without having to speak.',
 		repository: 'https://github.com/Erallie/voicely-text',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1290741552158609419',
 		appDirectoryUrl: 'https://discord.com/application-directory/1290741552158609419',
@@ -37,20 +37,24 @@ export const bots: Bot[] = [
 		backgroundEnd: '#203153',
 		features: [
 			{
-				title: 'Natural text-to-speech',
-				description: 'Read messages from the chat attached to your current voice channel.'
+				title: 'Voice-channel text-to-speech',
+				description:
+					"Send messages in a voice channel's text chat and have them spoken aloud to everyone in the call."
 			},
 			{
-				title: 'Your voice, your way',
-				description: 'Choose an accent and region, then save them as your defaults.'
+				title: 'Autoread and on-demand speech',
+				description:
+					'Turn on autoread whenever you join voice, speak a single message, or skip anything you do not want played.'
 			},
 			{
-				title: 'Flexible controls',
-				description: 'Start autoread, speak one message, or skip messages whenever you need.'
+				title: 'Custom accents and regions',
+				description:
+					'Choose your preferred accent and region, then override either one whenever a message needs something different.'
 			},
 			{
-				title: 'Friendly nicknames',
-				description: 'Choose how Voicely Text refers to you across Discord or in one server.'
+				title: 'Custom name pronunciation',
+				description:
+					'Choose a nickname when your display name is long, stylized, or mispronounced—everywhere or in one server.'
 			}
 		]
 	},
@@ -60,10 +64,10 @@ export const bots: Bot[] = [
 		shortName: 'Ping',
 		tagline: 'Know when the conversation starts.',
 		description:
-			'Get a private notification when a voice channel reaches the number of people you choose.',
+			'Pick the voice channels and group sizes you care about, then get a private message when enough people have gathered.',
 		icon: '/images/voicely-ping.webp',
 		banner: '/images/voicely-ping-banner.png',
-		whatItDoes: 'Built with flexibility in mind.',
+		whatItDoes: 'Stop checking channels. Let the conversation come to you.',
 		repository: 'https://github.com/Erallie/voicely-ping',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1290742648377966735',
 		appDirectoryUrl: 'https://discord.com/application-directory/1290742648377966735',
@@ -73,17 +77,23 @@ export const bots: Bot[] = [
 		backgroundEnd: '#642621',
 		features: [
 			{
-				title: 'Personal thresholds',
-				description: 'Choose how many people should be present before you receive a message.'
+				title: 'Participant-threshold alerts',
+				description:
+					'Choose a participant threshold and receive a private message when a voice channel reaches it.'
 			},
 			{
-				title: 'Multiple channels',
-				description: 'Watch several voice channels and configure each one independently.'
+				title: 'Multiple channels and thresholds',
+				description:
+					'Watch several voice channels—or set multiple thresholds for the same one—independently.'
 			},
-			{ title: 'Silent hours', description: 'Set recurring quiet periods in your own time zone.' },
+			{
+				title: 'Scheduled silent hours',
+				description:
+					'Set recurring silent hours by day, time, and time zone, including quiet periods that run overnight.'
+			},
 			{
 				title: 'Do Not Disturb',
-				description: 'Pause all notifications temporarily and resume them when you are ready.'
+				description: 'Stop every notification until you are ready to turn them back on.'
 			}
 		]
 	},
@@ -91,12 +101,12 @@ export const bots: Bot[] = [
 		slug: 'role',
 		name: 'Voicely Role',
 		shortName: 'Role',
-		tagline: 'Turn a few voices into a full room.',
+		tagline: 'Help active voice chats grow.',
 		description:
-			'Let your community know when people gather in voice by notifying a role at the perfect moment.',
+			'When a few people gather, Voicely Role can invite the right members to join—and keep the notification updated as the channel changes.',
 		icon: '/images/voicely-role.webp',
 		banner: '/images/voicely-role-banner.png',
-		whatItDoes: 'Built to promote server activity.',
+		whatItDoes: 'Give active voice chats the chance to grow.',
 		repository: 'https://github.com/Erallie/voicely-role',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1527731147428073493',
 		appDirectoryUrl: 'https://discord.com/application-directory/1527731147428073493',
@@ -106,20 +116,24 @@ export const bots: Bot[] = [
 		backgroundEnd: '#383890',
 		features: [
 			{
-				title: 'Configurable role pings',
-				description: 'Notify a chosen role when a voice channel reaches your threshold.'
+				title: 'Role and @everyone notifications',
+				description:
+					'Ping a chosen role—or @everyone—when a voice channel reaches the participant count you set.'
 			},
 			{
-				title: 'Watch every gathering place',
-				description: 'Monitor one or many voice channels in the same server.'
+				title: 'Multiple channels and thresholds',
+				description:
+					'Watch multiple voice channels and create different notifications or thresholds for each one.'
 			},
 			{
-				title: 'Live updates',
-				description: 'Keep the notification current as people join, leave, and wrap up.'
+				title: 'Live notification updates',
+				description:
+					'Show the current participant count as people join and leave, then update the message when everyone is gone.'
 			},
 			{
-				title: 'Flexible destinations',
-				description: 'Post in a text channel, the voice side chat, or notify everyone.'
+				title: 'Custom messages and destinations',
+				description:
+					'Choose a text channel or voice side chat and customize both the active and everyone-left messages.'
 			}
 		]
 	},
@@ -129,10 +143,10 @@ export const bots: Bot[] = [
 		shortName: 'Translate',
 		tagline: 'Help every voice be understood.',
 		description:
-			'Bring multilingual communities closer with translation designed for conversations on Discord.',
+			'Let everyone speak naturally in their own language while following the same conversation through live transcripts and translations.',
 		icon: '/images/voicely-translate.webp',
 		banner: '/images/voicely-translate-banner.png',
-		whatItDoes: 'Built to suit every server.',
+		whatItDoes: 'Cost-friendly translation for multilingual voice conversations.',
 		repository: 'https://github.com/Erallie/voicely-translate',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1535789654974930964',
 		appDirectoryUrl: 'https://discord.com/application-directory/1535789654974930964',
@@ -142,22 +156,23 @@ export const bots: Bot[] = [
 		backgroundEnd: '#0c5024',
 		features: [
 			{
-				title: 'Supports all BCP 47 language codes',
+				title: 'All BCP 47 languages',
 				description:
 					'Translate messages in any language, including dialects and regional variations.'
 			},
 			{
-				title: 'Translate multiple languages at once',
+				title: 'Multiple languages at once',
 				description:
-					'Choose which languages to translate messages into, and let Voicely Translate do the rest.'
+					'Use three or more languages in one session so everyone can follow in a language they understand.'
 			},
 			{
 				title: 'Voicely Text integration',
 				description: 'Read translated messages aloud in the voice channel with Voicely Text.'
 			},
 			{
-				title: 'An affordable solution',
-				description: 'Only pay for the tokens you use, with no monthly subscription required.'
+				title: 'Usage-based pricing',
+				description:
+					'Pay only for the transcription and translation your server uses, with no monthly subscription required.'
 			}
 		]
 	}
