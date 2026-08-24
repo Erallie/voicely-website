@@ -207,8 +207,43 @@
 	}
 	:global(.legal-document ul),
 	:global(.legal-document ol) {
-		padding-left: 1.4rem;
+		padding-left: 2rem;
 		margin: 1rem 0 1.5rem;
+	}
+	:global(.legal-document ul) {
+		list-style-type: disc;
+	}
+	:global(.legal-document ol) {
+		list-style-type: none;
+	}
+	:global(.legal-document ul ul) {
+		list-style-type: circle;
+	}
+	:global(.legal-document ul ul ul) {
+		list-style-type: square;
+	}
+	:global(.legal-document ul > li::marker) {
+		color: var(--bot-accent);
+		-webkit-text-fill-color: var(--bot-accent);
+		font-weight: 750;
+	}
+	:global(.legal-document ol > li) {
+		position: relative;
+	}
+	:global(.legal-document ol > li::before) {
+		content: counter(list-item) '.';
+		position: absolute;
+		right: calc(100% + 0.35rem);
+		white-space: nowrap;
+		color: var(--bot-accent);
+		-webkit-text-fill-color: var(--bot-accent);
+		font-weight: 750;
+	}
+	:global(.legal-document ol ol > li::before) {
+		content: counter(list-item, lower-alpha) '.';
+	}
+	:global(.legal-document ol ol ol > li::before) {
+		content: counter(list-item, lower-roman) '.';
 	}
 	:global(.legal-document li) {
 		padding-left: 0.35rem;
