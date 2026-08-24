@@ -1,83 +1,62 @@
-# Privacy Policy
+# Voicely Role Privacy Policy
 
-**Last Updated:** July 17, 2026
+**Last updated: August 23, 2026**
 
-## Introduction
+Gozar Productions LLC ("Gozar Productions," "we," "us," or "our") operates Voicely Role, a Discord bot that posts configured notifications when voice channels reach a chosen participation threshold.
 
-Voicely Role ("the Bot") is a Discord bot developed by Gozar Productions LLC. This Privacy Policy explains what information the Bot stores, how it is used, and your rights regarding that information.
+## Information We Process and Store
 
-By using Voicely Role, you agree to the practices described in this Privacy Policy.
+Voicely Role processes the following information supplied by Discord:
 
-## Information We Store
+- **Identifiers:** server, watched-channel, destination-channel, role, message, and—when a user is excluded from counts—user IDs;
+- **Voice-state events:** when members join, leave, or move between configured voice channels;
+- **Member information:** whether a participant is a person or a bot and whether the participant is excluded from counts; and
+- **Command interactions:** configuration commands and selections submitted by authorized administrators.
 
-Voicely Role stores only the information necessary to provide its functionality.
+Voicely Role observes voice-channel participation, but **does not receive or record the audio spoken there**.
 
-This may include:
+The Bot stores:
 
-- Discord server IDs
-- Discord channel IDs
-- Discord role IDs
-- Discord user IDs for excluded users
-- Configured administrator role IDs
-- Voice notification configurations
-- Custom notification messages
-- Internal notification state required for the Bot to determine when notifications should be sent
+- server, watched-channel, destination-channel, and role IDs;
+- user IDs that an administrator excludes from participant counts;
+- administrator-role IDs;
+- notification names, thresholds, side-chat choices, and custom active/ended message templates; and
+- sent-message IDs and trigger state used to update messages and prevent duplicates.
 
-Voicely Role does **not** store:
+**We do not intentionally store** usernames, display names, ordinary message content, voice recordings, email addresses, payment information, IP addresses, or browser/device information.
 
-- Voice communications
-- Message contents
-- Usernames
-- Display names
-- Voice recordings
-- Personal profile information
-- Email addresses
-- IP addresses
+**Operational logs may contain** server, channel, notification, or error identifiers needed to diagnose failures.
 
-## How Information Is Used
+## Uses and Sharing
 
-Stored information is used solely to:
+We use information to:
 
-- Monitor configured voice channels
-- Determine when notification thresholds have been reached
-- Send configured role notifications
-- Manage server-specific settings
-- Prevent duplicate notifications until channels have reset
+- count eligible participants in configured voice channels;
+- send, update, or end notification messages;
+- apply administrator-role and excluded-user settings;
+- prevent duplicate notifications; and
+- maintain security and troubleshoot the Service.
 
-## Data Sharing
+**We do not sell personal information or use it for targeted advertising.**
 
-Voicely Role does not sell, rent, or share stored data with third parties except when required by law.
+Voicely Role operates through Discord, which processes commands and messages under [Discord's Privacy Policy](https://discord.com/privacy). Stored configurations are not sent to advertising or analytics providers. We may disclose limited information when required by law or reasonably necessary to protect users, the Service, or our rights.
 
-## Data Retention
+## Retention and Deletion
 
-Configuration data is retained until:
+- **Configuration:** retained while the Bot is installed unless an authorized administrator changes or removes it.
+- **Individual records:** deleted when an authorized administrator removes them.
+- **Server removal:** when Discord notifies the Bot that it was removed, the active database deletes that server's configurations, administrator roles, excluded-user IDs, message IDs, and trigger state.
+- **Temporary memory:** cleared when no longer needed or when the Bot restarts.
+- **Backups:** if any, may remain for a limited period before being overwritten.
 
-- It is removed by an authorized server administrator,
-- The Bot is removed from the server, or
-- The data is otherwise deleted during maintenance.
+To request access, correction, or deletion, email [contact@gozarproductions.com](mailto:contact@gozarproductions.com) with the relevant server or user ID and enough information to verify your authority. Limited records may be retained for legal compliance, security, or dispute resolution.
 
-## Security
+## Security, Children, and International Processing
 
-Reasonable measures are taken to protect stored configuration data. However, no system can guarantee absolute security.
+We use reasonable access controls and data-minimization practices, but no online service is completely secure. Voicely Role is a general-audience service, is not directed to children under 13, and requires users to meet Discord's minimum age for their country. Information may be processed in the United States and wherever Discord operates.
 
-## Third-Party Services
+Depending on your location, you may have rights to access, correct, delete, or object to certain processing. We respond to verified requests as required by applicable law.
 
-Voicely Role operates through Discord and is subject to Discord's own Privacy Policy and Terms of Service.
+## Changes and Contact
 
-## Your Rights
-
-Server administrators may modify or remove stored server configuration at any time using the Bot's commands.
-
-To request deletion of any remaining stored data, please contact Gozar Productions LLC.
-
-## Changes
-
-This Privacy Policy may be updated from time to time. Continued use of the Bot after changes become effective constitutes acceptance of the updated policy.
-
-## Contact
-
-For questions regarding this Privacy Policy, please contact Gozar Productions LLC through the official support server or our email:
-
-Official support server: [https://discord.gozarproductions.com](https://discord.gozarproductions.com)
-
-Email: [contact@gozarproductions.com](mailto:contact@gozarproductions.com)
+We may update this policy when the Bot or applicable requirements change. Questions and privacy requests may be sent to [contact@gozarproductions.com](mailto:contact@gozarproductions.com) or through the [official support server](https://discord.gozarproductions.com).

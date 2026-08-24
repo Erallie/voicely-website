@@ -1,138 +1,81 @@
 # Voicely Translate Terms of Service
 
-**Last Updated: August 9, 2026**
+**Last updated: August 23, 2026**
 
-These Terms of Service ("Terms") govern your use of the Voicely Translate Discord bot ("Voicely Translate," the "Bot," or the "Service"). By installing, accessing, purchasing credits for, or using Voicely Translate, you agree to these Terms.
+These Terms govern Voicely Translate, operated by Gozar Productions LLC ("we," "us," or "our"). By installing, starting, participating in, purchasing credits for, or using the Bot, you agree to these Terms. If you act for a server or organization, you represent that you may bind it.
 
-## 1\. The Service
+## The Service
 
-Voicely Translate is a Discord bot that can join voice channels, transcribe speech, identify supported languages, translate transcribed speech into selected languages, and post the resulting text in Discord.
+During an active session, Voicely Translate:
 
-The Service may also provide usage credits, trial access, configurable server settings, and integrations used to process credit purchases.
+1. receives voice audio from the selected Discord channel;
+2. sends buffered speech audio to OpenAI for transcription;
+3. sends transcripts to OpenAI for language identification and translation; and
+4. posts the resulting text in Discord.
 
-Voicely Translate relies on third-party services, including Discord, OpenAI, Ko-fi, and infrastructure providers. Availability or functionality may therefore be affected by services outside our control.
+Automated output may mishear, omit, invent, or mistranslate content. **Do not rely on it for emergencies, legal or medical decisions, safety-critical communication, or other high-risk uses.**
 
-## 2\. Eligibility and Authorization
+## Voice Notice, Consent, and Eligibility
 
-You must comply with Discord's Terms of Service and all laws and rules applicable to your use of Voicely Translate.
+You must meet Discord's minimum age for your country. Server administrators and users who start sessions are responsible for:
 
-You may only use the Bot in servers and voice channels where you are authorized to do so. Server administrators are responsible for determining whether use of voice transcription and translation is appropriate for their server and for providing any notices or obtaining any consent required by applicable law.
+- ensuring the Bot is authorized in the server and channel;
+- giving participants clear notice; and
+- obtaining any consent required by recording, interception, wiretap, biometric, employment, or privacy law.
 
-Do not use Voicely Translate to secretly record, monitor, transcribe, or otherwise surveil people where doing so would violate applicable law or the rights of another person.
+**A Bot join notice may not satisfy every local requirement. Do not use the Service for covert surveillance.**
 
-## 3\. Transcription and Translation
+## Acceptable Use
 
-Voicely Translate uses automated systems to process speech and generate transcriptions and translations.
+You must comply with Discord's and applicable providers' terms and all applicable law. You may not use the Bot to:
 
-Automated transcription, language identification, and translation can be inaccurate. The Service may mishear speech, identify the wrong language, omit words, misunderstand context, or produce an incorrect translation.
+- harass, threaten, or unlawfully monitor anyone;
+- infringe rights or process content without authority;
+- evade payment, access, rate, or security controls;
+- exploit vulnerabilities or create unreasonable cost or load;
+- present generated output as guaranteed accurate; or
+- interfere with the Service or others.
 
-You should not rely on Voicely Translate for emergency communications, legal advice, medical decisions, safety-critical information, or any other situation where an inaccurate transcription or translation could cause significant harm.
+## Credits, Purchases, and Refunds
 
-## 4\. Voice Data
+Some use requires prepaid Voicely Credits:
 
-When the Bot is actively being used in a voice channel, audio may be processed as necessary to provide transcription and translation.
+- **Value:** unless stated otherwise at purchase, 100 Credits represents USD $1.00 of purchased balance.
+- **Assignment:** Credits are assigned to a Discord server, not an individual user.
+- **Consumption:** Credits are consumed according to measured transcription and translation usage.
+- **No cash value:** Credits are not transferable or redeemable for cash.
+- **Pricing:** usage pricing may include a multiplier above provider cost.
 
-The Service is not intended to function as a permanent voice-recording or archival service. Additional information about how data is handled is provided in the Voicely Translate Privacy Policy.
+- **Payment provider:** purchases may be processed by Ko-fi or another disclosed provider.
+- **Activation:** you are responsible for entering the correct server activation code; missing or incorrect codes can delay crediting.
+- **Refunds:** except where law requires otherwise, consumed credits are non-refundable.
+- **Payment problems:** contact us about duplicate charges or failed activation.
+- **Reversals and abuse:** fraud, chargebacks, reversals, or abuse may result in credits being removed or access restricted.
 
-## 5\. Credits and Paid Usage
+Trial, promotional, complimentary, or unlimited access may be changed or discontinued and has no cash value. Changes to future rates will not retroactively remove already credited purchased balance, but the amount of Service usage that balance buys may change prospectively with notice where required.
 
-Some use of Voicely Translate may require prepaid Voicely Credits.
+## Privacy, Content, and Providers
 
-Unless otherwise stated at the time of purchase:
+Our processing is described in the [Voicely Translate Privacy Policy](/translate/privacy/). Discord, OpenAI, Ko-fi, and Cloudflare have their own terms and policies. You retain rights in content you provide and grant us a limited permission to receive, buffer, transmit, transcribe, translate, display, and temporarily store it only to operate, secure, bill, and support the Service. You represent that you have the necessary rights and permissions.
 
-- 100 Voicely Credits represents $1.00 USD of purchased credit.
-- Credits are consumed according to the Service's usage-cost calculation.
-- The amount of credit consumed can vary depending on transcription and translation usage.
-- Credits are associated with the Discord server to which they are activated, rather than with an individual Discord user.
-- Credits have no cash value and cannot be exchanged for cash.
+We and our licensors retain rights in the Bot and branding. These Terms give you a limited, revocable, non-transferable right to use the Service. Feedback may be used without restriction or compensation.
 
-The Service may apply a usage-cost multiplier above the underlying cost of third-party services. The amount charged in Voicely Credits therefore does not necessarily equal the amount paid by the Service to a third-party provider for a particular request.
+## Availability and Suspension
 
-Pricing, credit rates, and usage calculations may be changed for future purchases or future usage. Material changes will not retroactively reduce credits that have already been purchased and added to a server solely because the purchase price later changes.
+The Service is provided on an "as is" and "as available" basis and depends on third parties. We may change, rate-limit, suspend, or discontinue features. We may restrict access for security, legal compliance, abuse prevention, nonpayment, excessive cost, provider restrictions, or violation of these Terms. Removing the Bot does not automatically create a refund or erase billing records.
 
-## 6\. Credit Activation
+## Disclaimers and Liability
 
-Credit purchases may require a server-specific activation code, such as a `VT-XXXXXX` code generated by the `/topup` command.
+To the maximum extent permitted by law, we disclaim implied warranties, including merchantability, fitness for a particular purpose, and non-infringement. We do not promise uninterrupted, secure, error-free, or accurate transcription, translation, attribution, or usage calculation.
 
-You are responsible for entering the correct activation code when purchasing credits. Credits are assigned according to the activation code supplied with the purchase.
+To the maximum extent permitted by law, Gozar Productions LLC and its members, employees, and providers will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, lost profits, lost data, reputational harm, or business interruption. Our total liability for claims relating to the Service will not exceed the greater of USD $100 or the amount you paid for Voicely Translate during the six months before the event giving rise to the claim. These limits do not exclude liability or consumer rights that cannot lawfully be limited.
 
-If an activation code is missing or incorrect, automatic activation may fail. Contact the Service operator if you believe a valid purchase was not properly credited.
+## Governing Law and Changes
 
-## 7\. Payments and Refunds
+Arizona law governs these Terms, excluding conflict-of-law rules, except where mandatory local law applies. Before filing a claim, contact us and allow 30 days for informal resolution. Courts with jurisdiction in Arizona will be the exclusive venue where legally permitted.
 
-Payments for Voicely Credits may be processed by Ko-fi or another disclosed payment provider. Payment processing is also subject to the payment provider's terms and policies.
+If a provision is unenforceable, the remainder remains effective. Failure to enforce is not a waiver. We may update these Terms by posting a revised version and date. Material changes apply prospectively with notice where required; continued use after they take effect means acceptance to the extent permitted by law.
 
-Except where required by law or otherwise stated at the time of purchase, used credits are non-refundable.
+## Contact
 
-If you experience a duplicate charge, failed credit activation, or another payment problem, contact the Service operator so the transaction can be reviewed.
-
-Chargebacks, payment reversals, fraud, or abuse may result in corresponding credits being removed and access to paid features being restricted.
-
-## 8\. Trials and Promotional Credits
-
-Voicely Translate may provide free trials, complimentary credits, promotional credits, or unrestricted access to selected servers.
-
-Trial and promotional access may be limited, changed, or discontinued at any time. Free or promotional credits have no cash value.
-
-## 9\. Acceptable Use
-
-You may not use Voicely Translate to:
-
-- Violate applicable law or another person's rights.
-- Harass, threaten, stalk, or unlawfully monitor another person.
-- Circumvent access restrictions, credit requirements, rate limits, or security controls.
-- Exploit bugs or vulnerabilities to obtain unpaid service.
-- Interfere with the Bot, its infrastructure, or other users' access to the Service.
-- Use automated requests or other methods intended to create unreasonable load or excessive costs.
-- Misrepresent generated translations or transcriptions as guaranteed to be accurate.
-- Use the Service in a manner prohibited by the terms of an applicable third-party provider.
-
-We may restrict or terminate access when reasonably necessary to prevent abuse, fraud, security problems, excessive disruption, or violations of these Terms.
-
-## 10\. Availability and Changes
-
-Voicely Translate is provided on an as-available basis.
-
-The Bot may be unavailable because of maintenance, software errors, internet outages, Discord outages, third-party API outages, account limitations, rate limits, or other circumstances.
-
-Features may be added, modified, suspended, or removed. We do not guarantee uninterrupted availability or that every feature will continue to be offered indefinitely.
-
-## 11\. Third-Party Services
-
-Voicely Translate may interact with third-party services such as Discord, OpenAI, Ko-fi, and Cloudflare.
-
-Your use of those services may also be governed by their own terms and privacy policies. We are not responsible for outages, changes, or actions of third-party services outside our reasonable control.
-
-## 12\. Disclaimer of Warranties
-
-To the maximum extent permitted by law, Voicely Translate is provided "as is" and "as available," without warranties of any kind, express or implied.
-
-We do not warrant that the Service will be uninterrupted, error-free, completely secure, or that any transcription, translation, language identification, usage calculation, or other generated output will be completely accurate.
-
-## 13\. Limitation of Liability
-
-To the maximum extent permitted by applicable law, the operator of Voicely Translate will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages arising from or related to use of the Service.
-
-Where liability cannot legally be excluded, liability will be limited to the maximum extent permitted by applicable law.
-
-Nothing in these Terms excludes rights or remedies that cannot lawfully be excluded.
-
-## 14\. Termination
-
-You may stop using Voicely Translate at any time and may remove the Bot from your Discord server.
-
-We may suspend or terminate access to the Service when reasonably necessary for security, legal compliance, abuse prevention, nonpayment, violation of these Terms, or discontinuation of the Service.
-
-## 15\. Changes to These Terms
-
-These Terms may be updated as Voicely Translate changes. The "Last Updated" date at the top of this document will be revised when the Terms are updated.
-
-Continued use of the Service after updated Terms take effect constitutes acceptance of the updated Terms to the extent permitted by applicable law.
-
-## 16\. Contact
-
-Questions about these Terms, billing issues, or Voicely Translate should be directed to Gozar Productions LLC through the official support server or our email:
-
-Official support server: [https://discord.gozarproductions.com](https://discord.gozarproductions.com)
-
-Email: [contact@gozarproductions.com](mailto:contact@gozarproductions.com)
+Contact Gozar Productions LLC about legal or billing matters at [contact@gozarproductions.com](mailto:contact@gozarproductions.com) or through the [official support server](https://discord.gozarproductions.com).
