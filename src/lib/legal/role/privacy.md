@@ -14,35 +14,35 @@ Voicely Role stores only the information necessary to provide its functionality.
 
 This may include:
 
--   Discord server IDs
--   Discord channel IDs
--   Discord role IDs
--   Discord user IDs for excluded users
--   Configured administrator role IDs
--   Voice notification configurations
--   Custom notification messages
--   Internal notification state required for the Bot to determine when notifications should be sent
+- Discord server IDs
+- Discord channel IDs
+- Discord role IDs
+- Discord user IDs for excluded users
+- Configured administrator role IDs
+- Voice notification configurations
+- Custom notification messages
+- Internal notification state required for the Bot to determine when notifications should be sent
 
 Voicely Role does **not** store:
 
--   Voice communications
--   Message contents
--   Usernames
--   Display names
--   Voice recordings
--   Personal profile information
--   Email addresses
--   IP addresses
+- Voice communications
+- Message contents
+- Usernames
+- Display names
+- Voice recordings
+- Personal profile information
+- Email addresses
+- IP addresses
 
 ## How Information Is Used
 
 Stored information is used solely to:
 
--   Monitor configured voice channels
--   Determine when notification thresholds have been reached
--   Send configured role notifications
--   Manage server-specific settings
--   Prevent duplicate notifications until channels have reset
+- Monitor configured voice channels
+- Determine when notification thresholds have been reached
+- Send configured role notifications
+- Manage server-specific settings
+- Prevent duplicate notifications until channels have reset
 
 ## Data Sharing
 
@@ -52,9 +52,9 @@ Voicely Role does not sell, rent, or share stored data with third parties except
 
 Configuration data is retained until:
 
--   It is removed by an authorized server administrator,
--   The Bot is removed from the server, or
--   The data is otherwise deleted during maintenance.
+- It is removed by an authorized server administrator,
+- The Bot is removed from the server, or
+- The data is otherwise deleted during maintenance.
 
 ## Security
 

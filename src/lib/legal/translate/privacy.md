@@ -16,11 +16,11 @@ Depending on how the Bot is used, Voicely Translate may process:
 
 ### Discord Information
 
--   Discord server (guild) IDs.
--   Discord user IDs.
--   Voice channel and text/channel identifiers needed to provide Bot functionality.
--   Discord display information needed to attribute a transcription or translation to the appropriate speaker.
--   Server configuration, such as selected/default translation languages and idle-timeout settings.
+- Discord server (guild) IDs.
+- Discord user IDs.
+- Voice channel and text/channel identifiers needed to provide Bot functionality.
+- Discord display information needed to attribute a transcription or translation to the appropriate speaker.
+- Server configuration, such as selected/default translation languages and idle-timeout settings.
 
 ### Voice Audio
 
@@ -38,16 +38,16 @@ Once text is posted in Discord, Discord's own storage, retention, permissions, a
 
 The Service may process and store the following information to track usage, manage credits, and process credit purchases:
 
--   Purchased and promotional/free-trial credit balances.
--   Total usage amounts and calculated usage costs.
--   Separate transcription and translation usage totals.
--   Trial usage and remaining trial balance.
--   Discord server IDs.
--   Server-specific `VT-XXXXXX` top-up codes.
--   Ko-fi transaction or message IDs used to identify payments and prevent duplicate credit activation.
--   Purchase amounts and currency.
--   Ko-fi Shop item identifiers used to verify that a purchase is for Voicely Translate Credits.
--   Whether a payment has already been claimed and applied to a Discord server.
+- Purchased and promotional/free-trial credit balances.
+- Total usage amounts and calculated usage costs.
+- Separate transcription and translation usage totals.
+- Trial usage and remaining trial balance.
+- Discord server IDs.
+- Server-specific `VT-XXXXXX` top-up codes.
+- Ko-fi transaction or message IDs used to identify payments and prevent duplicate credit activation.
+- Purchase amounts and currency.
+- Ko-fi Shop item identifiers used to verify that a purchase is for Voicely Translate Credits.
+- Whether a payment has already been claimed and applied to a Discord server.
 
 A server-specific `VT-XXXXXX` top-up code is associated with a Discord server ID. When that code is included with a qualifying Ko-fi purchase, the Service uses it to determine which Discord server should receive the purchased credits.
 
@@ -55,11 +55,11 @@ A server-specific `VT-XXXXXX` top-up code is associated with a Discord server ID
 
 When credits are purchased through Ko-fi, the Service receives information included in Ko-fi's webhook notification that is necessary to verify and process the purchase. This may include:
 
--   The Ko-fi transaction/message ID.
--   The purchase amount and currency.
--   The purchased Shop item's identifier.
--   The message included with the order.
--   The server-specific `VT-XXXXXX` code contained in that message.
+- The Ko-fi transaction/message ID.
+- The purchase amount and currency.
+- The purchased Shop item's identifier.
+- The message included with the order.
+- The server-specific `VT-XXXXXX` code contained in that message.
 
 The `VT-XXXXXX` code is associated with a Discord server ID so that purchased credits can be assigned to the correct Discord server.
 
@@ -73,19 +73,19 @@ The Service may generate operational logs containing information needed to diagn
 
 Information is processed to:
 
--   Connect the Bot to Discord voice channels.
--   Detect speech and distinguish speakers.
--   Transcribe voice audio.
--   Identify supported languages.
--   Translate transcribed speech.
--   Post transcriptions and translations to Discord.
--   Maintain server settings.
--   Track trial access and usage.
--   Maintain and deduct Voicely Credit balances.
--   Activate Ko-fi credit purchases.
--   Prevent duplicate payment crediting.
--   Diagnose failures and maintain reliability.
--   Protect the Service against abuse, fraud, and unauthorized access.
+- Connect the Bot to Discord voice channels.
+- Detect speech and distinguish speakers.
+- Transcribe voice audio.
+- Identify supported languages.
+- Translate transcribed speech.
+- Post transcriptions and translations to Discord.
+- Maintain server settings.
+- Track trial access and usage.
+- Maintain and deduct Voicely Credit balances.
+- Activate Ko-fi credit purchases.
+- Prevent duplicate payment crediting.
+- Diagnose failures and maintain reliability.
+- Protect the Service against abuse, fraud, and unauthorized access.
 
 ## Third-Party Services
 
@@ -133,16 +133,16 @@ Server administrators should manage Discord message history according to the pri
 
 Certain information must persist so the Service can function between restarts. This may include:
 
--   Discord server IDs.
--   Server configuration, including idle-timeout settings and saved default translation languages.
--   Remaining free-trial credit balances.
--   Purchased credit balances.
--   Total purchased-credit amounts.
--   Total calculated usage.
--   Separate transcription and translation usage totals.
--   Server-specific `VT-XXXXXX` top-up codes.
--   Payment-event identifiers and associated purchase amounts.
--   Information required to prevent duplicate credit claims.
+- Discord server IDs.
+- Server configuration, including idle-timeout settings and saved default translation languages.
+- Remaining free-trial credit balances.
+- Purchased credit balances.
+- Total purchased-credit amounts.
+- Total calculated usage.
+- Separate transcription and translation usage totals.
+- Server-specific `VT-XXXXXX` top-up codes.
+- Payment-event identifiers and associated purchase amounts.
+- Information required to prevent duplicate credit claims.
 
 This information may be stored locally by the Bot and/or in infrastructure used for Ko-fi credit processing.
 
@@ -160,10 +160,10 @@ Information is not sold as part of operating Voicely Translate.
 
 Information may be disclosed:
 
--   To service providers when necessary to operate the Service.
--   When required by applicable law, legal process, or a valid governmental request.
--   When reasonably necessary to investigate fraud, abuse, security threats, or violations of applicable terms.
--   In connection with a reorganization, transfer, or discontinuation of the Service, subject to applicable legal requirements.
+- To service providers when necessary to operate the Service.
+- When required by applicable law, legal process, or a valid governmental request.
+- When reasonably necessary to investigate fraud, abuse, security threats, or violations of applicable terms.
+- In connection with a reorganization, transfer, or discontinuation of the Service, subject to applicable legal requirements.
 
 ## Data Security
 

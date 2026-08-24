@@ -12,9 +12,9 @@ If you do not agree to these terms, you must discontinue use of the Bot.
 
 You agree to use Voicely Role in compliance with:
 
--   Discord's Terms of Service
--   Discord's Community Guidelines
--   All applicable laws and regulations
+- Discord's Terms of Service
+- Discord's Community Guidelines
+- All applicable laws and regulations
 
 You may not use the Bot to facilitate harassment, abuse, spam, or other prohibited activities.
 
@@ -30,10 +30,10 @@ Features may be modified, suspended, or discontinued at any time without prior n
 
 Server administrators are responsible for:
 
--   Configuring notification settings appropriately
--   Choosing which roles receive notifications
--   Managing excluded users
--   Selecting administrator roles with care
+- Configuring notification settings appropriately
+- Choosing which roles receive notifications
+- Managing excluded users
+- Selecting administrator roles with care
 
 ## Limitation of Liability
 

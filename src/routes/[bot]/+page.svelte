@@ -5,13 +5,13 @@
 
 <svelte:head
 	><title>{bot.name} — Voicely Bots</title>
-    <meta name="description" content={bot.description} /><link
+	<meta name="description" content={bot.description} /><link
 		rel="canonical"
 		href="https://voicely.gozarproductions.com/{bot.slug}/"
 	/>
 	<meta property="og:title" content="{bot.name} — Voicely Bots" />
 	<meta property="og:description" content={bot.description} />
-	<meta property="og:image" content={bot.icon} />
+	<meta property="og:image" content={`https://voicely.gozarproductions.com${bot.icon}`} />
 	<meta property="og:image:width" content="900" />
 	<meta property="og:image:height" content="900" />
 	<meta property="og:image:type" content="image/webp" />
@@ -19,12 +19,11 @@
 	<meta property="og:site_name" content="Voicely Bots" />
 	<meta property="og:type" content="website" />
 
-	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:card" content="summary" />
 	<meta name="twitter:title" content="{bot.name} — Voicely Bots" />
 	<meta name="twitter:description" content={bot.description} />
-	<meta name="twitter:image" content={bot.icon} />
-    </svelte:head
->
+	<meta name="twitter:image" content={`https://voicely.gozarproductions.com${bot.icon}`} />
+</svelte:head>
 <main
 	style:--bot-accent={bot.accent}
 	style:--bot-soft={bot.accentSoft}
@@ -39,7 +38,9 @@
 			<p>{bot.description}</p>
 			<div class="actions">
 				{#if bot.inviteUrl}
-					<a class="button invite" href={bot.inviteUrl} rel="external" target="_blank">Invite {bot.name}</a>
+					<a class="button invite" href={bot.inviteUrl} rel="external" target="_blank"
+						>Invite {bot.name}</a
+					>
 				{:else}
 					<span class="button invite unavailable" title="Add inviteUrl in src/lib/bots.ts"
 						>Invite link coming soon</span
@@ -50,9 +51,8 @@
 						>View in App Directory</a
 					>
 				{:else}
-					<span
-						class="button directory unavailable"
-						title="Add appDirectoryUrl in src/lib/bots.ts">App Directory coming soon</span
+					<span class="button directory unavailable" title="Add appDirectoryUrl in src/lib/bots.ts"
+						>App Directory coming soon</span
 					>
 				{/if}
 			</div>
@@ -64,7 +64,7 @@
 			<h2>{bot.whatItDoes}</h2>
 		</div>
 		<div class="feature-list">
-			{#each bot.features as feature, index}<article>
+			{#each bot.features as feature, index (feature.title)}<article>
 					<span>0{index + 1}</span>
 					<div>
 						<h3>{feature.title}</h3>

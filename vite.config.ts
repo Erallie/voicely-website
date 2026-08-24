@@ -12,10 +12,10 @@ export default defineConfig({
 			},
 
 			adapter: adapter({
-                pages: 'docs',
-                assets: 'docs',
-                fallback: '404.html'
-            })
+				pages: 'docs',
+				assets: 'docs',
+				fallback: '404.html'
+			})
 		})
 	]
 });

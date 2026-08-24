@@ -23,14 +23,16 @@
 <footer>
 	<div class="wrap footer-inner">
 		<div>
-			<a class="brand" href="/"><img class="brand-mark" src={favicon} alt="" /><span>Voicely</span></a>
+			<a class="brand" href="/"
+				><img class="brand-mark" src={favicon} alt="" /><span>Voicely</span></a
+			>
 			<p>Voice-oriented Discord bots for more connected communities.</p>
 		</div>
 		<div>
 			<p class="footer-label">The family</p>
-			<a href="/text/">Voicely Text</a><a href="/ping/">Voicely Ping</a><a href="/role/">Voicely Role</a><a
-				href="/translate/">Voicely Translate</a
-			>
+			<a href="/text/">Voicely Text</a><a href="/ping/">Voicely Ping</a><a href="/role/"
+				>Voicely Role</a
+			><a href="/translate/">Voicely Translate</a>
 		</div>
 		<div>
 			<p class="footer-label">Created by</p>
@@ -70,6 +72,13 @@
 	}
 	:global(a) {
 		color: inherit;
+	}
+	:global(a:focus-visible) {
+		outline: 3px solid var(--coral);
+		outline-offset: 4px;
+	}
+	:global(img) {
+		max-width: 100%;
 	}
 	:global(h1),
 	:global(h2),
@@ -209,6 +218,15 @@
 		}
 		.footer-inner > div:first-child {
 			grid-column: 1/-1;
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		:global(html) {
+			scroll-behavior: auto;
+		}
+		:global(*) {
+			scroll-behavior: auto !important;
+			transition-duration: 0.01ms !important;
 		}
 	}
 </style>

@@ -7,10 +7,16 @@
 		name="description"
 		content="Four voice-oriented tools for communities that want clearer conversations, more active voice channels, and fewer barriers."
 	/><link rel="canonical" href="https://voicely.gozarproductions.com/" />
-    
+
 	<meta property="og:title" content="Voicely Bots — Discord bots for connected communities" />
-	<meta property="og:description" content="Four voice-oriented tools for communities that want clearer conversations, more active voice channels, and fewer barriers." />
-	<meta property="og:image" content="/images/preview-image.webp" />
+	<meta
+		property="og:description"
+		content="Four voice-oriented tools for communities that want clearer conversations, more active voice channels, and fewer barriers."
+	/>
+	<meta
+		property="og:image"
+		content="https://voicely.gozarproductions.com/images/preview-image.webp"
+	/>
 	<meta property="og:image:width" content="1731" />
 	<meta property="og:image:height" content="909" />
 	<meta property="og:image:type" content="image/webp" />
@@ -20,10 +26,15 @@
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Voicely Bots — Discord bots for connected communities" />
-	<meta name="twitter:description" content="Four voice-oriented tools for communities that want clearer conversations, more active voice channels, and fewer barriers." />
-	<meta name="twitter:image" content="/images/preview-image.webp" />
-    </svelte:head
->
+	<meta
+		name="twitter:description"
+		content="Four voice-oriented tools for communities that want clearer conversations, more active voice channels, and fewer barriers."
+	/>
+	<meta
+		name="twitter:image"
+		content="https://voicely.gozarproductions.com/images/preview-image.webp"
+	/>
+</svelte:head>
 
 <main>
 	<section class="hero wrap">
@@ -38,7 +49,7 @@
 		</div>
 		<div class="preview" aria-label="Voicely bot status preview">
 			<div class="preview-bar"><span></span><span></span><span></span><b>voicely / bots</b></div>
-			{#each bots as bot}<div
+			{#each bots as bot (bot.slug)}<div
 					class="preview-row"
 					style:--accent={bot.accent}
 					style:--accent-soft={bot.accentSoft}
@@ -59,7 +70,7 @@
 			<p>Each Voicely bot does one job and stays out of the way.</p>
 		</header>
 		<div class="bot-grid">
-			{#each bots as bot}<a
+			{#each bots as bot (bot.slug)}<a
 					class="bot-card"
 					href="/{bot.slug}/"
 					style:--accent={bot.accent}

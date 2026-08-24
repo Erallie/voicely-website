@@ -6,7 +6,7 @@ export type Bot = {
 	description: string;
 	icon: string;
 	banner: string;
-    whatItDoes: string;
+	whatItDoes: string;
 	repository: string;
 	inviteUrl: string;
 	appDirectoryUrl: string;
@@ -27,7 +27,7 @@ export const bots: Bot[] = [
 			"Speak messages from a voice channel's text chat aloud, with personal voices, accents, regions, and nicknames.",
 		icon: '/images/voicely-text.webp',
 		banner: '/images/voicely-text-banner.png',
-        whatItDoes: "Built for mutes and talkers alike.",
+		whatItDoes: 'Built for mutes and talkers alike.',
 		repository: 'https://github.com/Erallie/voicely-text',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1290741552158609419',
 		appDirectoryUrl: 'https://discord.com/application-directory/1290741552158609419',
@@ -97,7 +97,7 @@ export const bots: Bot[] = [
 		icon: '/images/voicely-role.webp',
 		banner: '/images/voicely-role-banner.png',
 		whatItDoes: 'Built to promote server activity.',
-	    repository: 'https://github.com/Erallie/voicely-role',
+		repository: 'https://github.com/Erallie/voicely-role',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1527731147428073493',
 		appDirectoryUrl: 'https://discord.com/application-directory/1527731147428073493',
 		accent: '#f9f8e6',
@@ -132,7 +132,7 @@ export const bots: Bot[] = [
 			'Bring multilingual communities closer with translation designed for conversations on Discord.',
 		icon: '/images/voicely-translate.webp',
 		banner: '/images/voicely-translate-banner.png',
-        whatItDoes: 'Built to suit every server.',
+		whatItDoes: 'Built to suit every server.',
 		repository: 'https://github.com/Erallie/voicely-translate',
 		inviteUrl: 'https://discord.com/oauth2/authorize?client_id=1535789654974930964',
 		appDirectoryUrl: 'https://discord.com/application-directory/1535789654974930964',
@@ -143,11 +143,13 @@ export const bots: Bot[] = [
 		features: [
 			{
 				title: 'Supports all BCP 47 language codes',
-				description: 'Translate messages in any language, including dialects and regional variations.'
+				description:
+					'Translate messages in any language, including dialects and regional variations.'
 			},
 			{
 				title: 'Translate multiple languages at once',
-				description: 'Choose which languages to translate messages into, and let Voicely Translate do the rest.'
+				description:
+					'Choose which languages to translate messages into, and let Voicely Translate do the rest.'
 			},
 			{
 				title: 'Voicely Text integration',

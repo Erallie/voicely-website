@@ -1,16 +1,16 @@
-import { promises as fs } from "fs";
-import { createWriteStream } from "fs";
-import path from "path";
-import { SitemapStream, streamToPromise } from "sitemap";
+import { promises as fs } from 'fs';
+import { createWriteStream } from 'fs';
+import path from 'path';
+import { SitemapStream, streamToPromise } from 'sitemap';
 
-const ROUTES_DIR = path.resolve("src/routes");
-const OUTPUT_FILE = path.resolve("static/sitemap.xml");
+const ROUTES_DIR = path.resolve('src/routes');
+const OUTPUT_FILE = path.resolve('static/sitemap.xml');
 
-const HOSTNAME = "https://voicely.gozarproductions.com";
+const HOSTNAME = 'https://voicely.gozarproductions.com';
 
 const DYNAMIC_PARAMS = {
-	bot: ["text", "ping", "role", "translate"],
-	section: ["docs", "privacy", "terms"],
+	bot: ['text', 'ping', 'role', 'translate'],
+	section: ['docs', 'privacy', 'terms']
 };
 
 /**
@@ -26,12 +26,12 @@ function expandSegments(segments) {
 
 	for (const segment of segments) {
 		// Route groups such as (marketing) aren't included in the URL.
-		if (segment.startsWith("(") && segment.endsWith(")")) {
+		if (segment.startsWith('(') && segment.endsWith(')')) {
 			continue;
 		}
 
 		// Skip named layouts or similar internal directories.
-		if (segment.startsWith("@")) {
+		if (segment.startsWith('@')) {
 			return [];
 		}
 
@@ -42,22 +42,18 @@ function expandSegments(segments) {
 			const values = DYNAMIC_PARAMS[parameterName];
 
 			if (!values?.length) {
-				console.warn(
-					`Skipping route: no values configured for [${parameterName}]`,
-				);
+				console.warn(`Skipping route: no values configured for [${parameterName}]`);
 
 				return [];
 			}
 
-			expandedRoutes = expandedRoutes.flatMap((route) =>
-				values.map((value) => [...route, value]),
-			);
+			expandedRoutes = expandedRoutes.flatMap((route) => values.map((value) => [...route, value]));
 
 			continue;
 		}
 
 		// Skip unsupported patterns such as [...rest] and [[optional]].
-		if (segment.includes("[") || segment.includes("]")) {
+		if (segment.includes('[') || segment.includes(']')) {
 			console.warn(`Skipping unsupported dynamic segment: ${segment}`);
 			return [];
 		}
@@ -65,14 +61,12 @@ function expandSegments(segments) {
 		expandedRoutes = expandedRoutes.map((route) => [...route, segment]);
 	}
 
-	return expandedRoutes.map((route) =>
-		route.length === 0 ? "/" : `/${route.join("/")}`,
-	);
+	return expandedRoutes.map((route) => (route.length === 0 ? '/' : `/${route.join('/')}`));
 }
 
 async function getRoutes(directory, baseDirectory = ROUTES_DIR) {
 	const entries = await fs.readdir(directory, {
-		withFileTypes: true,
+		withFileTypes: true
 	});
 
 	let routes = [];
@@ -85,7 +79,7 @@ async function getRoutes(directory, baseDirectory = ROUTES_DIR) {
 			continue;
 		}
 
-		if (entry.name !== "+page.svelte") {
+		if (entry.name !== '+page.svelte') {
 			continue;
 		}
 
@@ -107,11 +101,11 @@ async function generateSitemap() {
 	const routes = [...new Set(discoveredRoutes)].sort();
 
 	await fs.mkdir(path.dirname(OUTPUT_FILE), {
-		recursive: true,
+		recursive: true
 	});
 
 	const sitemap = new SitemapStream({
-		hostname: HOSTNAME,
+		hostname: HOSTNAME
 	});
 
 	const outputStream = createWriteStream(OUTPUT_FILE);
@@ -120,7 +114,7 @@ async function generateSitemap() {
 
 	for (const route of routes) {
 		sitemap.write({
-			url: route,
+			url: route
 		});
 	}
 
@@ -128,12 +122,10 @@ async function generateSitemap() {
 
 	await streamToPromise(sitemap);
 
-	console.log(
-		`Generated static/sitemap.xml with ${routes.length} routes.`,
-	);
+	console.log(`Generated static/sitemap.xml with ${routes.length} routes.`);
 }
 
 generateSitemap().catch((error) => {
-	console.error("Sitemap generation failed:", error);
+	console.error('Sitemap generation failed:', error);
 	process.exitCode = 1;
 });

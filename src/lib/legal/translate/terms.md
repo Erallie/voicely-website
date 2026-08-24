@@ -40,11 +40,11 @@ Some use of Voicely Translate may require prepaid Voicely Credits.
 
 Unless otherwise stated at the time of purchase:
 
--   100 Voicely Credits represents $1.00 USD of purchased credit.
--   Credits are consumed according to the Service's usage-cost calculation.
--   The amount of credit consumed can vary depending on transcription and translation usage.
--   Credits are associated with the Discord server to which they are activated, rather than with an individual Discord user.
--   Credits have no cash value and cannot be exchanged for cash.
+- 100 Voicely Credits represents $1.00 USD of purchased credit.
+- Credits are consumed according to the Service's usage-cost calculation.
+- The amount of credit consumed can vary depending on transcription and translation usage.
+- Credits are associated with the Discord server to which they are activated, rather than with an individual Discord user.
+- Credits have no cash value and cannot be exchanged for cash.
 
 The Service may apply a usage-cost multiplier above the underlying cost of third-party services. The amount charged in Voicely Credits therefore does not necessarily equal the amount paid by the Service to a third-party provider for a particular request.
 
@@ -78,14 +78,14 @@ Trial and promotional access may be limited, changed, or discontinued at any tim
 
 You may not use Voicely Translate to:
 
--   Violate applicable law or another person's rights.
--   Harass, threaten, stalk, or unlawfully monitor another person.
--   Circumvent access restrictions, credit requirements, rate limits, or security controls.
--   Exploit bugs or vulnerabilities to obtain unpaid service.
--   Interfere with the Bot, its infrastructure, or other users' access to the Service.
--   Use automated requests or other methods intended to create unreasonable load or excessive costs.
--   Misrepresent generated translations or transcriptions as guaranteed to be accurate.
--   Use the Service in a manner prohibited by the terms of an applicable third-party provider.
+- Violate applicable law or another person's rights.
+- Harass, threaten, stalk, or unlawfully monitor another person.
+- Circumvent access restrictions, credit requirements, rate limits, or security controls.
+- Exploit bugs or vulnerabilities to obtain unpaid service.
+- Interfere with the Bot, its infrastructure, or other users' access to the Service.
+- Use automated requests or other methods intended to create unreasonable load or excessive costs.
+- Misrepresent generated translations or transcriptions as guaranteed to be accurate.
+- Use the Service in a manner prohibited by the terms of an applicable third-party provider.
 
 We may restrict or terminate access when reasonably necessary to prevent abuse, fraud, security problems, excessive disruption, or violations of these Terms.
 

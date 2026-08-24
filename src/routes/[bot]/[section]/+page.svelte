@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { getLegalDocument } from '$lib/legal';
-	import { marked } from 'marked';
+	import { SvelteSet } from 'svelte/reactivity';
 
 	let { data } = $props();
 	let bot = $derived(data.bot);
@@ -17,11 +16,9 @@
 				? `Privacy information for ${bot.name}.`
 				: `Terms of service for ${bot.name}.`
 	);
-	let legalMarkdown = $derived(getLegalDocument(bot.slug, section));
-	let legalHtml = $derived(legalMarkdown ? (marked.parse(legalMarkdown) as string) : '');
 
 	function linkHeadings(node: HTMLElement) {
-		const usedIds = new Set<string>();
+		const usedIds = new SvelteSet<string>();
 		const headings = node.querySelectorAll<HTMLElement>(
 			'.legal-document h1, .legal-document h2, .legal-document h3, .legal-document h4'
 		);
@@ -47,7 +44,9 @@
 		}
 
 		if (location.hash) {
-			requestAnimationFrame(() => document.getElementById(location.hash.slice(1))?.scrollIntoView());
+			requestAnimationFrame(() =>
+				document.getElementById(location.hash.slice(1))?.scrollIntoView()
+			);
 		}
 	}
 </script>
@@ -98,7 +97,7 @@
 				<a class="text-link" href="{bot.repository}/issues">View support issues →</a>
 			</section>
 		{:else}
-			<div class="legal-document">{@html legalHtml}</div>
+			<div class="legal-document">{@html data.legalHtml}</div>
 		{/if}
 	</article>
 </main>
