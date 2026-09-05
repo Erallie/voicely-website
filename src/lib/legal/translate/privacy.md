@@ -1,6 +1,6 @@
 # Voicely Translate Privacy Policy
 
-**Last updated: August 23, 2026**
+**Last updated: September 5, 2026**
 
 Gozar Productions LLC ("Gozar Productions," "we," "us," or "our") operates Voicely Translate, a Discord bot that transcribes speech from an active voice channel and posts translations in Discord.
 
@@ -37,6 +37,8 @@ Operational logs may contain:
 - errors and diagnostic details; and
 - the transcript text returned by OpenAI.
 
+Successful translated messages are not written to operational logs; only translation usage and cost information is logged. If a translation fails, the message being translated may appear in diagnostic error information.
+
 Logs may therefore contain personal or sensitive information spoken during a session.
 
 ## OpenAI Processing
@@ -69,7 +71,7 @@ We disclose information to OpenAI, Discord, Ko-fi, Cloudflare, and other provide
 
 - **Voice buffers and generated text:** remain in Bot memory only for the active processing workflow.
 - **Posted transcripts and translations:** remain on Discord until deleted there.
-- **Operational logs:** retained only as reasonably needed for troubleshooting, billing, security, and maintenance, then overwritten or deleted according to the hosting environment.
+- **Operational logs:** retained only until the Bot restarts, when they are deleted. The Bot is scheduled to restart every Sunday at midnight (Arizona time) and may restart sooner for maintenance, updates, or unexpected interruptions.
 - **Server settings and credit records:** retained while needed to deliver purchased credits, maintain accurate accounting, prevent duplicate claims, meet legal or tax obligations, and resolve disputes.
 - **Server removal:** removing the Bot does not automatically erase billing records or unused credits.
 
