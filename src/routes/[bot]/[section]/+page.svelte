@@ -214,7 +214,7 @@
 		list-style-type: disc;
 	}
 	:global(.legal-document ol) {
-		list-style-type: none;
+		list-style-type: decimal;
 	}
 	:global(.legal-document ul ul) {
 		list-style-type: circle;
@@ -222,30 +222,19 @@
 	:global(.legal-document ul ul ul) {
 		list-style-type: square;
 	}
-	:global(.legal-document ul > li::marker) {
+	:global(.legal-document ol ol) {
+		list-style-type: lower-alpha;
+	}
+	:global(.legal-document ol ol ol) {
+		list-style-type: lower-roman;
+	}
+	:global(.legal-document li::marker) {
 		color: var(--bot-accent);
-		-webkit-text-fill-color: var(--bot-accent);
 		font-weight: 750;
-	}
-	:global(.legal-document ol > li) {
-		position: relative;
-	}
-	:global(.legal-document ol > li::before) {
-		content: counter(list-item) '.';
-		position: absolute;
-		right: calc(100% + 0.35rem);
-		white-space: nowrap;
-		color: var(--bot-accent);
-		-webkit-text-fill-color: var(--bot-accent);
-		font-weight: 750;
-	}
-	:global(.legal-document ol ol > li::before) {
-		content: counter(list-item, lower-alpha) '.';
-	}
-	:global(.legal-document ol ol ol > li::before) {
-		content: counter(list-item, lower-roman) '.';
 	}
 	:global(.legal-document li) {
+		color: var(--bot-accent);
+		-webkit-text-fill-color: var(--bot-accent);
 		padding-left: 0.35rem;
 		margin: 0.45rem 0;
 	}
@@ -279,7 +268,6 @@
 	:global(.legal-document h3),
 	:global(.legal-document h4),
 	:global(.legal-document p),
-	:global(.legal-document li),
 	:global(.legal-document a) {
 		background: linear-gradient(135deg, var(--bot-accent), var(--bot-soft));
 		-webkit-background-clip: text;
